@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1,user-scalable=no">
+<title>棍子英雄</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/stickHero.js"></script>
+<script>
+var html=document.getElementsByTagName("html")[0];
+var rootResize=function(){
+var winClient=document.documentElement.clientWidth;
+var fontSize=winClient<640?winClient/6.4:100;
+if(fontSize<20){
+	fontSize=20;
+	}
+html.style.fontSize=fontSize+"px";
+}
+rootResize()
+window.onresize=function(){
+	rootResize();
+}
+</script>
+
+<script>
+window.onload = function(){
+	new stickHero();
+}
+</script>
+</head>
+
+<body>
+<div id="box">
+	<div id="content">
+		<div id="left"></div>
+		<div id="middle"></div>
+		<div id="right"></div>
+		<div id="hero"></div>
+		<div id="stick"></div>
+	</div>
+	
+	<div id="score">0</div>
+	<div id="gameover">
+		<h2>游戏结束</h2>
+		<div id="result">
+			<dl>
+				<dt>分数</dt>
+				<dd id="result1">0</dd>
+			</dl>
+			<dl>
+				<dt>最佳</dt>
+				<dd id="result2">0</dd>
+			</dl>
+		</div>
+		<div id="share">
+			分享
+		</div>
+		<ul>
+			<li><span id="rank">排名</span></li>
+			<li><span id="star">关注</span></li>
+			<li><span id="reset">重新开始</span></li>
+		</ul>
+	</div>
+	
+	<div id="share_div">
+		<img src="images/share.png">
+	</div>
+	
+	<div id="ranking">
+		<ul>
+			<li><span>1</span><span>姓名</span><span>分数</span></li>
+			<li><span>2</span><span>姓名</span><span>分数</span></li>
+			<li><span>3</span><span>姓名</span><span>分数</span></li>
+			<li><span>4</span><span>姓名</span><span>分数</span></li>
+			<li><span>5</span><span>姓名</span><span>分数</span></li>
+			<li><span>6</span><span>姓名</span><span>分数</span></li>
+			<li><span>7</span><span>姓名</span><span>分数</span></li>
+			<li><span>8</span><span>姓名</span><span>分数</span></li>
+			<li><span>9</span><span>姓名</span><span>分数</span></li>
+			<li><span>10</span><span>姓名</span><span>分数</span></li>
+		</ul>
+	</div>
+	<div id="weixin">
+		<img src="images/weixin.jpg">
+		<h2>多喜欢</h2>
+		<p>长按二维码，关注我们！</p>
+		<div id="weixin_close"><span></span><span></span></div>
+	</div>
+</div>	
+
+<audio id="jiaoti">
+  <source src="media/jiaoti.wav" type="audio/wav">
+</audio>
+<audio id="pao">
+  <source src="media/pao.wav" type="audio/wav">
+</audio>
+<audio id="jinbi">
+  <source src="media/jinbi.wav" type="audio/wav">
+</audio>
+<audio id="luoshui">
+  <source src="media/luoshui.wav" type="audio/wav">
+</audio>
+
+</body>
+</html>
